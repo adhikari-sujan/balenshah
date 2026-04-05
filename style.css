@@ -1,0 +1,141 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    color: white;
+    font-family: "Noto Sans", "Poppins", "Quicksand", "Roboto", "sans-serif";
+}
+
+body {
+        background-color:#a50104;
+        height: 100vh;
+        width: 100%;
+}
+
+
+
+/* NAVBAR ------------------------------------------- */
+
+#navbar {
+    display: flex;
+    background-color: 	rgba(19, 19, 19, 0.5);
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    margin: 10px 10px 30px 30px;
+    padding: 10px;
+    height:auto;
+    width: 600px;
+
+}
+
+.logo {
+    margin-left: 15px;
+    font-family: "Poppins", "Quicksand", "Roboto", "sans-serif";
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.logo a:hover {
+    color:rgb(238, 214, 0);
+}
+
+#nav-ul {
+    
+}
+
+.navlist {
+    display: inline-block;
+}
+
+.navlist a {
+    font-weight: 800;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.navlist a:hover{
+    color:rgb(238, 214, 0);
+    text-decoration:underline;
+    font-size: 110%;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: #131313;
+    border: none;
+    margin-right: 15px;
+    border-radius: 30px;
+    font-family: "Noto Sans", "Poppins", "Quicksand", "Roboto", "sans-serif";
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+button:hover {
+    font-size: 105%;
+    font-weight: 800;
+    color: black;
+    background-color:rgb(238, 214, 0);
+
+}
+
+
+
+
+/* MAIN ---------------------------------------------- */
+
+#pill {
+    display: flex;
+    height:30px;
+    width:200px;
+    background-color:#510002;
+    border: 1px solid black;
+
+    font-family: "Poppins", "Quicksand", "Roboto", "sans-serif";
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px
+
+}
+
+#pill h3 {
+    font-size: 14px;
+    font-weight: 900;
+    color:rgb(238, 214, 0);
+    text-decoration: none;
+}
+
+h1 {
+    /* font-family: */
+
+    text-align:center;
+    font-size: 100px;
+    font-weight:900;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#home-img {
+    margin-top: 0px;
+    padding-top: 0px;
+    justify-content: center;
+    /* position:fixed; */
+    display: flex;
+    widht: 500px;
+    z-index: 10;
+    position:relative
+    
+
+}
+
+#home-img img {
+    width: auto;
+
+}
