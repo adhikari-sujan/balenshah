@@ -235,9 +235,9 @@ h1 {
     justify-content: center;
     /* position:fixed; */
     display: flex;
-    widht: 500px;
+    width: 500px;
     z-index: 10;
-    position:relative
+    position: relative;
     
 
 }
