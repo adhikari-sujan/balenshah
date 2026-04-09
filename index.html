@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Balen Shah </title>
+    
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +16,37 @@
 </head>
 <body>
     
+     <!-- HEADER NAV BAR =========================================== -->
     <header>
-        <nav id="navbar">
-            <span class="logo"><a href=""> बालेन </a></span>
+
+        <nav>
+            <div class="logo"> <a href="#"> Sujan </a> </div>
 
             <ul>
-                <li class="navlist"> <a href="#about"> About </a> </li>
-                <li class="navlist"> <a href="#gallery"> Gallery </a> </li>
-                <li class="navlist"> <a href="#connect"> Connect </a> </li>
-                <button type="button"> Contact </button>
+                <li><a href="#about"> About </a></li>
+                <li><a href="#service"> Service </a></li>
+                <li><a href="#blog"> Blog </a></li>
+
+                <a class="btn" href="mailto:"> Contact </a>
             </ul>
+            
+            <div class="toggle-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
 
         </nav>
+
+        <ul class="sidebar">
+                <li><a href="#about"> About </a></li>
+                <li><a href="#service"> Service </a></li>
+                <li><a href="#blog"> Blog </a></li>
+
+                <a class="btn" href="mailto:"> Contact </a>
+            </ul>
+
     </header>
+    <!-- HEADER FINISHED =============================================== -->
+
 
 
 
@@ -43,5 +64,24 @@
         <h3> this is footer !</h3>
     </footer>
 
+
+        <script>
+        const toggleBtn = document.querySelector('.toggle-bar')
+        const toggleBtnIcon = document.querySelector('.toggle-bar i')
+        const sideBar = document.querySelector('.sidebar')
+
+        toggleBtn.onclick = function () {
+            sideBar.classList.toggle('open')
+            const isOpen = sideBar.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+
+        }
+
+    </script>
+
+    
 </body>
 </html>
