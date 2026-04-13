@@ -1,24 +1,25 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    text-decoration:none;
-    list-style:none;
-    /* font-family: "Noto Sans", "Poppins", "Quicksand", "Roboto", "sans-serif"; */
-     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Quicksand", Akshar, sans-serif;
+
 }
 
 body {
-        background-color:#a50104;
-        height: 100vh;
-        width: 100%;
+    background-color: #b50000;
+    height: 100vh;
+    width: 100%;
 }
 
 :root {
-    --main-color: rgb(206, 0, 0);
-    --colorwhite: rgb(243, 243, 243);
-    --colorblack: rgb(23, 23, 23);
+    --red: #b50000;
+    --red-dark: #7a0000;
+    --white: #ffffff;
+    --yellow: #f5c518;
+    --black: #0f0f0f;
 }
 
 
@@ -32,112 +33,130 @@ header {
 
 nav {
     width: 70vw;
-    background-color: #7a00009e;
+    background-color: rgba(122, 0, 0, 0.5);
     backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari support  */
+    -webkit-backdrop-filter: blur(1px);
+    /* For Safari support  */
 
 
-  z-index: 900;
-    box-shadow: 2px 3px 5px rgba(26, 0, 0, 0.9);
+    z-index: 900;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
     /* border: 3px dashed black; */
     border-radius: 2rem;
     margin: 10px;
-    padding: 10px;
-    
+    padding: 7px 7px 5px;
 
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: flex-start;
     list-style: none;
-    padding-top: 5px;
+    padding: 5px;
+    
 }
 
-nav li{
-    
-    margin-right: 30px;
+nav li {
+    margin-right: 25px;
     padding: 0.3rem 0.7rem;
 }
 
-nav a{
+nav li:hover {
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
+nav a {
+    font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
     text-decoration: none;
     color: white;
 }
 
 .logo {
     margin-right: auto;
+    padding: 7px 7px 5px 12px;
     cursor: pointer;
 
 }
 
-.logo a{
+.logo a {
+      font-family: "Akshar", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 900;
     font-size: 1.8rem;
-    padding: 10px;
+    color: var(--yellow);
+    padding-top: 10px;
 }
 
 .btn {
-    background-color: var(--colorwhite);
+    background-color: var(--white);
     padding: 0.3rem 0.7rem;
     margin-right: 10px;
     border-radius: 1rem;
     color: rgb(0, 0, 0);
     transition: transform 0.5s ease-in-out;
-    
-    
+
+
 }
 
 .btn:hover {
-    color: var(--colorwhite);
+    color: var(--white);
     padding: 0.3rem 0.7rem;
-    background-color: var(--colorblack);
+    background-color: var(--black);
     scale: 1.1;
     transform: scale(1.1);
-    
+
 }
 
 .sidebar {
     display: none;
-    width: 80vw;
+    width: 70vw;
     height: 0;
-    background-color: rgba(154, 154, 154, 0.5);
+    background-color: rgba(122, 0, 0, 0.5);
     backdrop-filter: blur(5px);
-    position:absolute;
-    top: 75px;
+    position: absolute;
+    top: 80px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 2px 2px 5px rgba(19, 19, 19, 0.59);
+    box-shadow: 0px 1px 20px rgba(19, 19, 19, 1);
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;
+    position: fixed;
 
 }
 
-.sidebar.open{
-    height: 220px;
+.sidebar.open {
+    
+    height: auto;
 }
 
-.sidebar li{
+.sidebar li {
     list-style: none;
-    padding: 1.2rem ;
+    padding: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(144, 0, 0, 0.768);
+    background-color: rgba(122, 0, 0, 0.5);
     margin: 0 0 5px 0;
-    
+
 }
 
 .sidebar a {
+    font-weight: 600;
     text-decoration: none;
     color: white;
-    
+
 }
 
 .sidebar li:hover {
     scale: 1.1;
-    
+
 }
 
 .sidebar .btn {
@@ -145,7 +164,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 40px;
+    margin: 10px 40px 10px;
 }
 
 .sidebar .btn:hover {
@@ -160,7 +179,8 @@ nav .toggle-bar {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    display: none; /* this display in mobile */
+    display: none;
+    /* this display in mobile */
 }
 
 
@@ -171,17 +191,18 @@ nav .toggle-bar {
 
 /* RESPONSIVE FOR MOBILE, TABS ..=================================== */
 
-@media (max-width: 650px){
+@media (max-width: 700px) {
 
     nav {
         width: 80vw;
     }
 
-    nav ul, nav .btn {
+    nav ul,
+    nav .btn {
         display: none;
     }
 
-    nav .toggle-bar{
+    nav .toggle-bar {
         display: block;
     }
 
@@ -196,53 +217,143 @@ nav .toggle-bar {
 
 /* MAIN ---------------------------------------------- */
 
-#pill {
-    display: flex;
-    height:30px;
-    width:200px;
-    background-color:#510002;
-    border: 1px solid black;
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
 
-    font-family: "Poppins", "Quicksand", "Roboto", "sans-serif";
+.pill {
+    height: 35px;
+    width: 250px;
+    background-color: #7f0000b3;
+    border: 1px solid #7f00008e;
     border-radius: 100px;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 0px
-
-}
-
-#pill h3 {
-    font-size: 14px;
-    font-weight: 900;
-    color:rgb(238, 214, 0);
-    text-decoration: none;
-}
-
-h1 {
-    /* font-family: */
-
-    text-align:center;
-    font-size: 100px;
-    font-weight:900;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-#home-img {
-    margin-top: 0px;
-    padding-top: 0px;
-    justify-content: center;
-    /* position:fixed; */
-    display: flex;
-    width: 500px;
-    z-index: 10;
-    position: relative;
+    margin-top: 20px;
     
+    /* padding: 0px */
+}
+
+.pill h3 {
+    font-family: "Akshar", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.1rem;
+word-spacing: 5px;
+    color: var(--yellow);
+    /* text-decoration: none; */
+}
+
+
+            /* Balendra Shah text here ======================== */
+main h1 {
+    
+     font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    text-align: center;
+    font-size: 12vw;
+    font-weight: 900;
+    color: var(--white);
+    /* line-height: 80px; */
+    /* margin-bottom: 0px;
+    padding-bottom: 0px; */
+}
+
+
+            /* balen shah photo ==================== */
+
+#home-photo {
+    position: absolute;
+    bottom: 0;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Let image fill from bottom up, height = 95% of hero */
+
+  z-index: 10;
+
+  /* width: clamp(250px, 40vw, 600px); */
+
 
 }
 
-#home-img img {
-    width: auto;
+#home-photo img {
+    height: auto;
+  width: 35vw;
+  display: block;
+  object-fit: contain;
+  /* object-position: bottom center; */
+
+}
+
+
+
+#about {
+    width: 100vw;
+    height: 500px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .pill {
+        width: 150px;
+        height: 25px;
+        
+    }
+
+    .pill h3{
+        font-size: 12px;
+        word-spacing: 0;
+    }
+
+    main h1 {
+        margin: 10px;
+        font-size: 4.5rem;
+        line-height: 100%;
+        word-space: 0;
+    }
+
+    .hero #home-photo {
+        width: 50vw;
+        height: auto;
+        background-color: rgb(0, 83, 99);
+        height: auto;
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+  /* width: 50vw; */
+    }
+
+    .hero #home-photo img {
+        position: absolute;
+        top: 0;
+        /* left: 50%; */
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        width: 40vw;
+        height: auto;
+  display: block;
+  object-fit: contain;
+
+    }
 
 }
