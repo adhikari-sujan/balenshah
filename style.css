@@ -224,6 +224,8 @@ nav .toggle-bar {
 
 /* MAIN ---------------------------------------------- */
 
+/* ============== HERO PAGE ============================ */
+
 .hero {
   position: relative;
   /* width: 100vw; */
@@ -334,33 +336,38 @@ main h1 {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 0;
+        bottom: 20px;
 
         display:flex;
         justify-content: center;
 
-        height: 100px;
-        width: 200px;
+        height: 25vh;
+        width: 50vw;
         /* background-color: skyblue; */
+        z-index: 100;
+        
     }
 
     .scroll-line {
         /* display: flex; */
         /* align-items: flex-start; */
 
-        background-color: white;
-        width: 2px;
+        background-color: rgba(255, 255, 255, 0);
+        border-right: 2px dashed white;
+        border-left: 2px dashed white;
+        width: 10px;
         height: 40px;
+        margin-top: 50px;
     }
 
     .scroll-text {
         /* display: flex; */
         /* align-items: flex-end; */
-
+        
         position: absolute;
         bottom: 0;
 
-        height: 55px;
+        height: 60px;
         color: var(--white);
         font-family: "Quicksand", sans-serif;
         font-optical-sizing: auto;
@@ -370,22 +377,7 @@ main h1 {
 
 
 
-#about {
-    width: 100vw;
-    height: 500px;
-    background-color: white;
-}
-
-
-
-
-
-
-
-
-
-
-
+   /* RSEPONSIVNESS OF HOME PAGE ============================ */
 
 @media (max-width: 700px) {
     .pill {
@@ -408,7 +400,7 @@ main h1 {
 
     #home-photo {
         position: absolute;
-        top: 10vh;
+        top: 5vh;
         width: 80vw;
         height: 60vh;
         /* background-color: rgba(28, 38, 111, 0.5); */
@@ -447,3 +439,14 @@ main h1 {
     }
 
 }
+
+
+/* ========================= ABOUT SECTION ============================= */
+
+
+#about {
+    width: 100vw;
+    height: 500px;
+    background-color: white;
+}
+
