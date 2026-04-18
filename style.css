@@ -544,6 +544,10 @@ main h1 {
 
 @media (max-width: 1000px) {
 
+    #about .pill {
+        width: 30vw;
+    }
+
     #about .about-balen {
         border-radius: 0 50px 5px 0;
         width: 95vw;
@@ -558,13 +562,13 @@ main h1 {
     #about .about-photo {
         width: clamp(220px, 50vw, 240px);
         /* right: 90%; */
-        left: 60%;
+        left: 50%;
         overflow: hidden;
     }
 
     #about .rsp-photo {
         width: clamp(200px, 50vw, 200px);
-        left: 30%;
+        left: 20%;
         top: 80%;
 
     }
