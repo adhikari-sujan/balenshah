@@ -458,7 +458,7 @@ main h1 {
 
 #about .pill {
     /* margin-top: auto; */
-    width: 20vw;
+    width: 15vw;
     margin-bottom: 10px;
 }
 
@@ -545,7 +545,8 @@ main h1 {
 @media (max-width: 1000px) {
 
     #about .pill {
-        width: 30vw;
+        width: 150px;
+        height: 25px;
     }
 
     #about .about-balen {
@@ -580,13 +581,83 @@ main h1 {
 #timeline {
     width: 100vw;
     height: 200vh;
-    background-color: blue;
+    background-color: rgb(255, 0, 0);
 }
 
 
+/* ===================== gallery photos section ========================================= */
+
+ #gallery {
+    
+    width: 100vw;
+    height: auto;
+    background-color: var(--white);
+    padding: 10px;
+    
+ }
+
+ #gallery .pill {
+    margin-top: auto;
+    
+ }
+
+ /* gallery photos container ======================== */
+
+ .gallery-container {
+    display: flex;
+    width: 95%;
+    height: 600px;
+    margin: auto;
+    margin-top: 10px;
+    gap: 10px;
+    padding: 20px;
+    /* background-color: red; */
+ }
+
+  .photo {
+    flex: 1;
+    background-color: var(--red-dark);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    transition: all .5s ease;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid var(--red-dark);
+
+  }
+  
+
+  .photo:hover {
+    flex: 5;
+  }
+
+  .photo:focus {
+    flex: 5;
+  }
+
+  .gallery-container:hover .photo:not(:hover) {
+    flex: 1;
+  }
+
+  .p1 { background-image: url('images/gallery/p1.jpg'); }
+  .p2 { background-image: url('images/gallery/p2.jpg'); }
+  .p3 { background-image: url('images/gallery/p3.jpg'); }
+  .p4 { background-image: url('images/gallery/p4.jpg'); }
+  .p5 { background-image: url('images/gallery/p5.jpg'); }
+  .p6 { background-image: url('images/gallery/p6.jpg'); }
 
 
 
+  /* =================== Responsive on mobile by going photos column ================ */
+
+  @media (max-width: 800px) {
+    .gallery-container {
+        flex-direction: column;
+        height: 700px;
+    }
+
+  }
 
 
 /* ================socials nav link ================ */
