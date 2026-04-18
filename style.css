@@ -282,6 +282,7 @@ main h1 {
 /* balen shah photo ==================== */
 
 #home-photo {
+    
     position: absolute;
     top: 15vh;
     left: 50%;
@@ -579,10 +580,36 @@ main h1 {
 
 /* ============TIME LINE =================== */
 #timeline {
+    /* z-index: 100; */
     width: 100vw;
-    height: 200vh;
-    background-color: rgb(255, 0, 0);
+    height: 150vh;
+    background-color: var(--red);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+    
 }
+
+.time {
+    top: 225vh;
+    height: auto;
+    width: 200px;
+    position: absolute;
+    /* display: flex;
+    text-align: center;
+    justify-content: center; */
+    background-color: white;
+    color: black;
+}
+
+.time p {
+
+}
+
+
+
 
 
 /* ===================== gallery photos section ========================================= */
